@@ -3,15 +3,21 @@ exports = (typeof window === 'undefined') ? global : window;
 exports.arraysAnswers = {
 
   removeWithoutCopy : function(arr, item) {
-
+    var pos;
+        while (arr.indexOf(item) != -1) {
+          pos = arr.indexOf(item);
+          arr.splice(pos, 1);
+        };
+        return arr;
   },
 
   append : function(arr, item) {
+    return arr.push(item);
 
   },
 
   truncate : function(arr) {
-
+    arr.pop();
   },
 
   prepend : function(arr, item) {
@@ -23,7 +29,7 @@ exports.arraysAnswers = {
   },
 
   concat : function(arr1, arr2) {
-
+    var result = arr1.concat(arr2)
   },
 
   insert : function(arr, item, index) {
