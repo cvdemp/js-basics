@@ -65,7 +65,9 @@ exports.arraysAnswers = {
 
 
   square : function(arr) {
-
+    return arr.map(function (int) {
+      return Math.pow(int, 2);
+    });
   },
 
   findAllOccurrences : function(arr, target) {
