@@ -59,15 +59,17 @@ exports.arraysAnswers = {
   duplicates : function(arr) {
     var dupArr = arr.filter(function duplicates(elem,pos) {
       return arr.indexOf(elem) != pos;
-    })
+    });
     return dupArr;
+    // HALP, returning an array with some dups
   },
 
 
   square : function(arr) {
-    return arr.map(function (int) {
-      return Math.pow(int, 2);
+    var squareArr = arr.map(function(number){
+      return Math.pow(number,2);
     });
+    return squareArr;
   },
 
   findAllOccurrences : function(arr, target) {
