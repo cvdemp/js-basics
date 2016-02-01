@@ -26,8 +26,8 @@ exports.bestPracticesAnswers = {
   },
 
   parseInt : function(string) {
-    // var num = parseInt(string)
-    // return num;
+    var num = parseInt(string)
+    return num;
   },
 
   identity : function(val1, val2) {

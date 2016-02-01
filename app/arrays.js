@@ -57,11 +57,18 @@ exports.arraysAnswers = {
   },
 
   duplicates : function(arr) {
-    var dupArr = arr.filter(function duplicates(elem,pos) {
-      return arr.indexOf(elem) != pos;
+    var numberOfTimes = {};
+    var dups =[];
+    arr.forEach(function(item){
+      if(numberOfTimes[item] == 1){
+        dups.push(item);
+      }
+      if(numberOfTimes[item] == undefined){
+        numberOfTimes[item] = 0;
+      }
+      numberOfTimes[item]++;
     });
-    return dupArr;
-    // HALP, returning an array with some dups
+    return dups;
   },
 
 
